@@ -50,7 +50,7 @@ a {
       font-size: 1.4rem;
       padding: 0px 10px;
       &:hover {
-        background-color: rgb(216, 2, 2);
+        background-color: $close-color;
       }
     }
     span {
@@ -66,6 +66,44 @@ a {
       font-size: 1.2rem;
       color: white;
       padding: 5px 10px;
+    }
+  }
+}
+
+// Ribbons & Menu
+
+.control {
+  background-color: #f3f2f1;
+  .menu {
+
+    ul {
+      position: relative;
+      margin: auto 0;
+      li {
+        text-align: center;
+        color: #444;
+        padding: 5px 0px;
+        &:hover  {
+          background-color: white;
+          color: #000;
+        }
+        
+      }
+      li:nth-child(1)::before {
+        content: "";
+        width: 40px;
+        height: 3px;
+        background-color: $excel-color;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    div.share {
+      font-weight: bold;
+      color: $excel-color;
+      font-size: 13px;
+      padding: 7px;
+      background: white;
     }
   }
 }

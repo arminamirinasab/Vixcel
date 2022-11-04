@@ -62,3 +62,40 @@ a {
   color: white;
   padding: 5px 10px;
 }
+
+.control {
+  background-color: #f3f2f1;
+}
+
+.control .menu ul {
+  position: relative;
+  margin: auto 0;
+}
+
+.control .menu ul li {
+  text-align: center;
+  color: #444;
+  padding: 5px 0px;
+}
+
+.control .menu ul li:hover {
+  background-color: white;
+  color: #000;
+}
+
+.control .menu ul li:nth-child(1)::before {
+  content: "";
+  width: 40px;
+  height: 3px;
+  background-color: #217346;
+  position: absolute;
+  bottom: 0;
+}
+
+.control .menu div.share {
+  font-weight: bold;
+  color: #217346;
+  font-size: 13px;
+  padding: 7px;
+  background: white;
+}
