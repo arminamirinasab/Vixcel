@@ -1,1 +1,64 @@
-/* No CSS */
+* {
+  cursor: default;
+}
+
+body {
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.top-nav {
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(to right, #217346, #1e673f);
+  color: white;
+}
+
+.top-nav a,
+.top-nav span,
+.top-nav i {
+  color: white;
+}
+
+.top-nav > div {
+  width: 33%;
+}
+
+.top-nav i {
+  padding: 7px 10px;
+}
+
+.top-nav i:hover {
+  background-color: #1b5f3a;
+}
+
+.top-nav .right a:hover {
+  background-color: #195735;
+}
+
+.top-nav .right i {
+  font-size: 1.4rem;
+  padding: 0px 10px;
+}
+
+.top-nav .right i:hover {
+  background-color: #d80202;
+}
+
+.top-nav .right span {
+  font-size: 0.9rem;
+  margin: 0 10px;
+}
+
+.top-nav .center {
+  font-size: 0.9rem;
+}
+
+.top-nav .left i {
+  font-size: 1.2rem;
+  color: white;
+  padding: 5px 10px;
+}

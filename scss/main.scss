@@ -1,2 +1,71 @@
 // Import Functions , Mixins & Variables To Main.scss
-@import 'functions';
+@import "functions";
+
+// Basics CSS
+
+* {
+  cursor: default;
+}
+
+body {
+  font-family: Calibri, "Trebuchet MS", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+// Top Navigation
+
+.top-nav {
+  padding: 0;
+  overflow: hidden;
+  background-image: linear-gradient(
+    to right,
+    $excel-color,
+    darken($excel-color, 3%)
+  );
+  color: white;
+  a,
+  span,
+  i {
+    color: white;
+  }
+  > div {
+    width: 33%;
+  }
+  i {
+    padding: 7px 10px;
+    &:hover {
+      background-color: darken($excel-color, 5%);
+    }
+  }
+  .right {
+    a {
+      &:hover {
+        background-color: darken($excel-color, 7%);
+      }
+    }
+    i {
+      font-size: 1.4rem;
+      padding: 0px 10px;
+      &:hover {
+        background-color: rgb(216, 2, 2);
+      }
+    }
+    span {
+      font-size: 0.9rem;
+      margin: 0 10px;
+    }
+  }
+  .center {
+    font-size: 0.9rem;
+  }
+  .left {
+    i {
+      font-size: 1.2rem;
+      color: white;
+      padding: 5px 10px;
+    }
+  }
+}
