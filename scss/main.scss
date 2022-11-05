@@ -89,14 +89,17 @@ a {
         }
         
       }
-      li:nth-child(1)::before {
+      span#home-border {
+        transition: all 0.3s ;
         content: "";
         width: 40px;
         height: 3px;
         background-color: $excel-color;
         position: absolute;
+        left: 10px;
         bottom: 0;
       }
+
     }
     div.share {
       font-weight: bold;

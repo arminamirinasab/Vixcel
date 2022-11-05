@@ -32,14 +32,15 @@
     <div class="control">
         <div class="menu d-flex px-5 align-items-center justify-content-between">
             <ul class="list-unstyled d-flex ">
-                <li style="width: 60px;">Home</li>
-                <li style="width: 70px;">Insert</li>
-                <li style="width: 110px;">Page Layout</li>
-                <li style="width: 80px;">Formulas</li>
-                <li style="width: 60px;">Data</li>
-                <li style="width: 70px;">Review</li>
-                <li style="width: 50px;">View</li>
-                <li style="width: 50px;">Help</li>
+                <li onclick="changeTabs('10px')" style="width: 60px;">Home</li>
+                <span id="home-border"></span>
+                <li onclick="changeTabs('75px')" style="width: 70px;">Insert</li>
+                <li onclick="changeTabs('155px' , '60px')" style="width: 110px;">Page Layout</li>
+                <li onclick="changeTabs('255px' , '50px')" style="width: 80px;">Formulas</li>
+                <li onclick="changeTabs('335px' , '30px')" style="width: 60px;">Data</li>
+                <li onclick="changeTabs('395px')" style="width: 70px;">Review</li>
+                <li onclick="changeTabs('460px' , '30px')" style="width: 50px;">View</li>
+                <li onclick="changeTabs('510px' , '30px')" style="width: 50px;">Help</li>
                 <span class="brd-green"></span>
             </ul>
             <div class="share">
@@ -48,6 +49,9 @@
         </div>
         <div class="ribbon"></div>
     </div>
+
+    <!-- Custom Scripts -->
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

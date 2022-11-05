@@ -83,12 +83,14 @@ a {
   color: #000;
 }
 
-.control .menu ul li:nth-child(1)::before {
+.control .menu ul span#home-border {
+  transition: all 0.3s;
   content: "";
   width: 40px;
   height: 3px;
   background-color: #217346;
   position: absolute;
+  left: 10px;
   bottom: 0;
 }
 
