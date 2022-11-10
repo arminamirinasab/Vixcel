@@ -72,13 +72,15 @@ a {
 // Ribbons & Menu
 
 .control {
-  background-color: #f3f2f1;
+  background-color: $whiteBackgroundColor;
   .menu {
+    border-bottom: 1px solid #DDD;
     ul {
       position: relative;
       margin: auto 0;
       li {
         text-align: center;
+        font-size: 15.5px;
         color: #444;
         padding: 5px 0px;
         &:hover  {
@@ -105,4 +107,25 @@ a {
       padding: 7px;
     }
   }
+
+  .ribbon {
+    padding: 10px;
+    button {
+      * {
+        cursor: pointer;
+      }
+      font-size: 13px;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      border: none;
+      &:hover {
+        background-color: $hoverItemBackgroundColor;
+      }
+    }
+    button.verticalButton {
+      flex-direction: column;
+    }
+  }
 }
+

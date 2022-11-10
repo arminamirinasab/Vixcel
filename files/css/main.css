@@ -66,6 +66,10 @@ a {
   background-color: #f3f2f1;
 }
 
+.control .menu {
+  border-bottom: 1px solid #DDD;
+}
+
 .control .menu ul {
   position: relative;
   margin: auto 0;
@@ -73,6 +77,7 @@ a {
 
 .control .menu ul li {
   text-align: center;
+  font-size: 15.5px;
   color: #444;
   padding: 5px 0px;
 }
@@ -97,4 +102,28 @@ a {
   color: #217346;
   font-size: 13px;
   padding: 7px;
+}
+
+.control .ribbon {
+  padding: 10px;
+}
+
+.control .ribbon button {
+  font-size: 13px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border: none;
+}
+
+.control .ribbon button * {
+  cursor: pointer;
+}
+
+.control .ribbon button:hover {
+  background-color: #e1dfdd;
+}
+
+.control .ribbon button.verticalButton {
+  flex-direction: column;
 }
