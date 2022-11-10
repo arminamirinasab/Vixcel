@@ -5,9 +5,11 @@
 
 * {
   cursor: default;
+  box-sizing: border-box;
 }
 
 body {
+  overflow: hidden;
   font-family: Calibri, "Trebuchet MS", sans-serif;
 }
 
@@ -233,8 +235,12 @@ footer.bottomNav {
 }
 
 main {
-  overflow: auto;
   table {
+    width: 100%;
+    height: 80vh;
+    overflow: scroll;
+    display: flex;
+    transform-origin: 0 0;
     th , td {
       width: 100px;
       border: 0.5px solid #CCC;
@@ -249,6 +255,7 @@ main {
     }
     tr td input {
       width: 100%;
+      height: 100%;
       border: none;
     }
   }
