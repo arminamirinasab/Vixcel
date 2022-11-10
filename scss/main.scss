@@ -15,6 +15,16 @@ a {
   text-decoration: none;
 }
 
+i {
+  font-style: normal;
+}
+
+%forHover {
+  &:hover {
+    background-color: $hoverItemBackgroundColor;
+  }
+}
+
 // Top Navigation
 
 .top-nav {
@@ -74,7 +84,7 @@ a {
 .control {
   background-color: $whiteBackgroundColor;
   .menu {
-    border-bottom: 1px solid #DDD;
+    border-bottom: 1px solid #ddd;
     ul {
       position: relative;
       margin: auto 0;
@@ -83,14 +93,13 @@ a {
         font-size: 15.5px;
         color: #444;
         padding: 5px 0px;
-        &:hover  {
+        &:hover {
           background-color: white;
           color: #000;
         }
-        
       }
       span#home-border {
-        transition: all 0.3s ;
+        transition: all 0.3s;
         content: "";
         width: 40px;
         height: 3px;
@@ -99,7 +108,6 @@ a {
         left: 10px;
         bottom: 0;
       }
-
     }
     div.share {
       color: $excel-color;
@@ -119,9 +127,7 @@ a {
       display: flex;
       align-items: center;
       border: none;
-      &:hover {
-        background-color: $hoverItemBackgroundColor;
-      }
+      @extend %forHover;
     }
     button.verticalButton {
       flex-direction: column;
@@ -129,3 +135,99 @@ a {
   }
 }
 
+// Bottom Navigation
+
+footer.bottomNav {
+  code {
+    font-size: 12px;
+  }
+  div * {
+    padding: 2px 5px;
+  margin: 0 5px;
+  }
+  background-color: $whiteBackgroundColor;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  i {
+    font-size: 14px;
+    @extend %forHover;
+  }
+
+  input[type=range] {
+    -webkit-appearance: none;
+    background: transparent;
+    width: 100%;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #BFBFBF;
+    border-radius: 0px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 15px;
+    width: 4px;
+    border-radius: 0px;
+    background: #7D7D7D;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -7.5px;
+  }
+  input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #BFBFBF;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: #BFBFBF;
+    border-radius: 0px;
+  }
+  input[type=range]::-moz-range-thumb {
+    height: 15px;
+    width: 4px;
+    border-radius: 0px;
+    background: #7D7D7D;
+    cursor: pointer;
+  }
+  input[type=range]::-ms-track {
+    width: 100%;
+    height: 1px;
+    cursor: pointer;
+    animate: 0.2s;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type=range]::-ms-fill-lower {
+    background: #BFBFBF;
+    border-radius: 0px;
+  }
+  input[type=range]::-ms-fill-upper {
+    background: #BFBFBF;
+    border-radius: 0px;
+  }
+  input[type=range]::-ms-thumb {
+    margin-top: 1px;
+    height: 28px;
+    width: 8px;
+    border-radius: 0px;
+    background: #7D7D7D;
+    cursor: pointer;
+  }
+  input[type=range]:focus::-ms-fill-lower {
+    background: #BFBFBF;
+  }
+  input[type=range]:focus::-ms-fill-upper {
+    background: #BFBFBF;
+  }
+  
+  
+}

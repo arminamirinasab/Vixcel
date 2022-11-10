@@ -10,6 +10,14 @@ a {
   text-decoration: none;
 }
 
+i {
+  font-style: normal;
+}
+
+.control .ribbon button:hover, footer.bottomNav i:hover {
+  background-color: #e1dfdd;
+}
+
 .top-nav {
   overflow: hidden;
   background-image: linear-gradient(to right, #217346, #1e673f);
@@ -67,7 +75,7 @@ a {
 }
 
 .control .menu {
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #ddd;
 }
 
 .control .menu ul {
@@ -120,10 +128,113 @@ a {
   cursor: pointer;
 }
 
-.control .ribbon button:hover {
-  background-color: #e1dfdd;
-}
-
 .control .ribbon button.verticalButton {
   flex-direction: column;
+}
+
+footer.bottomNav {
+  background-color: #f3f2f1;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer.bottomNav code {
+  font-size: 12px;
+}
+
+footer.bottomNav div * {
+  padding: 2px 5px;
+  margin: 0 5px;
+}
+
+footer.bottomNav i {
+  font-size: 14px;
+}
+
+footer.bottomNav input[type=range] {
+  -webkit-appearance: none;
+  background: transparent;
+  width: 100%;
+}
+
+footer.bottomNav input[type=range]:focus {
+  outline: none;
+}
+
+footer.bottomNav input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #BFBFBF;
+  border-radius: 0px;
+}
+
+footer.bottomNav input[type=range]::-webkit-slider-thumb {
+  height: 15px;
+  width: 4px;
+  border-radius: 0px;
+  background: #7D7D7D;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7.5px;
+}
+
+footer.bottomNav input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #BFBFBF;
+}
+
+footer.bottomNav input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: #BFBFBF;
+  border-radius: 0px;
+}
+
+footer.bottomNav input[type=range]::-moz-range-thumb {
+  height: 15px;
+  width: 4px;
+  border-radius: 0px;
+  background: #7D7D7D;
+  cursor: pointer;
+}
+
+footer.bottomNav input[type=range]::-ms-track {
+  width: 100%;
+  height: 1px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+footer.bottomNav input[type=range]::-ms-fill-lower {
+  background: #BFBFBF;
+  border-radius: 0px;
+}
+
+footer.bottomNav input[type=range]::-ms-fill-upper {
+  background: #BFBFBF;
+  border-radius: 0px;
+}
+
+footer.bottomNav input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  height: 28px;
+  width: 8px;
+  border-radius: 0px;
+  background: #7D7D7D;
+  cursor: pointer;
+}
+
+footer.bottomNav input[type=range]:focus::-ms-fill-lower {
+  background: #BFBFBF;
+}
+
+footer.bottomNav input[type=range]:focus::-ms-fill-upper {
+  background: #BFBFBF;
 }
