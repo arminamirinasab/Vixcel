@@ -14,6 +14,10 @@ i {
   font-style: normal;
 }
 
+input:focus {
+  outline: none;
+}
+
 .control .ribbon button:hover, footer.bottomNav i:hover {
   background-color: #e1dfdd;
 }
@@ -152,89 +156,111 @@ footer.bottomNav i {
   font-size: 14px;
 }
 
-footer.bottomNav input[type=range] {
+footer.bottomNav input[type="range"] {
   -webkit-appearance: none;
   background: transparent;
   width: 100%;
 }
 
-footer.bottomNav input[type=range]:focus {
+footer.bottomNav input[type="range"]:focus {
   outline: none;
 }
 
-footer.bottomNav input[type=range]::-webkit-slider-runnable-track {
+footer.bottomNav input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 1px;
   cursor: pointer;
   animate: 0.2s;
-  background: #BFBFBF;
+  background: #bfbfbf;
   border-radius: 0px;
 }
 
-footer.bottomNav input[type=range]::-webkit-slider-thumb {
+footer.bottomNav input[type="range"]::-webkit-slider-thumb {
   height: 15px;
   width: 4px;
   border-radius: 0px;
-  background: #7D7D7D;
+  background: #7d7d7d;
   cursor: pointer;
   -webkit-appearance: none;
   margin-top: -7.5px;
 }
 
-footer.bottomNav input[type=range]:focus::-webkit-slider-runnable-track {
-  background: #BFBFBF;
+footer.bottomNav input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #bfbfbf;
 }
 
-footer.bottomNav input[type=range]::-moz-range-track {
+footer.bottomNav input[type="range"]::-moz-range-track {
   width: 100%;
   height: 1px;
   cursor: pointer;
-  animate: 0.2s;
-  background: #BFBFBF;
+  background: #bfbfbf;
   border-radius: 0px;
 }
 
-footer.bottomNav input[type=range]::-moz-range-thumb {
+footer.bottomNav input[type="range"]::-moz-range-thumb {
   height: 15px;
   width: 4px;
   border-radius: 0px;
-  background: #7D7D7D;
+  background: #7d7d7d;
   cursor: pointer;
 }
 
-footer.bottomNav input[type=range]::-ms-track {
+footer.bottomNav input[type="range"]::-ms-track {
   width: 100%;
   height: 1px;
   cursor: pointer;
-  animate: 0.2s;
   background: transparent;
   border-color: transparent;
   color: transparent;
 }
 
-footer.bottomNav input[type=range]::-ms-fill-lower {
-  background: #BFBFBF;
+footer.bottomNav input[type="range"]::-ms-fill-lower {
+  background: #bfbfbf;
   border-radius: 0px;
 }
 
-footer.bottomNav input[type=range]::-ms-fill-upper {
-  background: #BFBFBF;
+footer.bottomNav input[type="range"]::-ms-fill-upper {
+  background: #bfbfbf;
   border-radius: 0px;
 }
 
-footer.bottomNav input[type=range]::-ms-thumb {
+footer.bottomNav input[type="range"]::-ms-thumb {
   margin-top: 1px;
   height: 28px;
   width: 8px;
   border-radius: 0px;
-  background: #7D7D7D;
+  background: #7d7d7d;
   cursor: pointer;
 }
 
-footer.bottomNav input[type=range]:focus::-ms-fill-lower {
-  background: #BFBFBF;
+footer.bottomNav input[type="range"]:focus::-ms-fill-lower {
+  background: #bfbfbf;
 }
 
-footer.bottomNav input[type=range]:focus::-ms-fill-upper {
-  background: #BFBFBF;
+footer.bottomNav input[type="range"]:focus::-ms-fill-upper {
+  background: #bfbfbf;
+}
+
+main {
+  overflow: auto;
+}
+
+main table th, main table td {
+  width: 100px;
+  border: 0.5px solid #CCC;
+  text-align: center;
+}
+
+main table tr th:first-child {
+  width: 40px;
+}
+
+main table tr.firstRow th, main table tr th:first-child {
+  background-color: #e6e6e6;
+  border-top: none;
+}
+
+main table tr td input {
+  width: 100%;
+  border: none;
 }

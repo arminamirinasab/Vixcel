@@ -19,6 +19,10 @@ i {
   font-style: normal;
 }
 
+input:focus {
+  outline: none;
+}
+
 %forHover {
   &:hover {
     background-color: $hoverItemBackgroundColor;
@@ -143,7 +147,7 @@ footer.bottomNav {
   }
   div * {
     padding: 2px 5px;
-  margin: 0 5px;
+    margin: 0 5px;
   }
   background-color: $whiteBackgroundColor;
   position: fixed;
@@ -154,80 +158,98 @@ footer.bottomNav {
     @extend %forHover;
   }
 
-  input[type=range] {
+  input[type="range"] {
     -webkit-appearance: none;
     background: transparent;
     width: 100%;
   }
-  input[type=range]:focus {
+  input[type="range"]:focus {
     outline: none;
   }
-  input[type=range]::-webkit-slider-runnable-track {
+  input[type="range"]::-webkit-slider-runnable-track {
     width: 100%;
     height: 1px;
     cursor: pointer;
     animate: 0.2s;
-    background: #BFBFBF;
+    background: #bfbfbf;
     border-radius: 0px;
   }
-  input[type=range]::-webkit-slider-thumb {
+  input[type="range"]::-webkit-slider-thumb {
     height: 15px;
     width: 4px;
     border-radius: 0px;
-    background: #7D7D7D;
+    background: #7d7d7d;
     cursor: pointer;
     -webkit-appearance: none;
     margin-top: -7.5px;
   }
-  input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #BFBFBF;
+  input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #bfbfbf;
   }
-  input[type=range]::-moz-range-track {
+  input[type="range"]::-moz-range-track {
     width: 100%;
     height: 1px;
     cursor: pointer;
-    animate: 0.2s;
-    background: #BFBFBF;
+    background: #bfbfbf;
     border-radius: 0px;
   }
-  input[type=range]::-moz-range-thumb {
+  input[type="range"]::-moz-range-thumb {
     height: 15px;
     width: 4px;
     border-radius: 0px;
-    background: #7D7D7D;
+    background: #7d7d7d;
     cursor: pointer;
   }
-  input[type=range]::-ms-track {
+  input[type="range"]::-ms-track {
     width: 100%;
     height: 1px;
     cursor: pointer;
-    animate: 0.2s;
     background: transparent;
     border-color: transparent;
     color: transparent;
   }
-  input[type=range]::-ms-fill-lower {
-    background: #BFBFBF;
+  input[type="range"]::-ms-fill-lower {
+    background: #bfbfbf;
     border-radius: 0px;
   }
-  input[type=range]::-ms-fill-upper {
-    background: #BFBFBF;
+  input[type="range"]::-ms-fill-upper {
+    background: #bfbfbf;
     border-radius: 0px;
   }
-  input[type=range]::-ms-thumb {
+  input[type="range"]::-ms-thumb {
     margin-top: 1px;
     height: 28px;
     width: 8px;
     border-radius: 0px;
-    background: #7D7D7D;
+    background: #7d7d7d;
     cursor: pointer;
   }
-  input[type=range]:focus::-ms-fill-lower {
-    background: #BFBFBF;
+  input[type="range"]:focus::-ms-fill-lower {
+    background: #bfbfbf;
   }
-  input[type=range]:focus::-ms-fill-upper {
-    background: #BFBFBF;
+  input[type="range"]:focus::-ms-fill-upper {
+    background: #bfbfbf;
   }
-  
-  
+}
+
+main {
+  overflow: auto;
+  table {
+    th , td {
+      width: 100px;
+      border: 0.5px solid #CCC;
+      text-align: center;
+    }
+    tr th:first-child() {
+      width: 40px;
+    }
+    tr.firstRow th , tr th:first-child() {
+      background-color: $columnsBackgroundColor;
+      border-top: none;
+    }
+    tr td input {
+      width: 100%;
+      border: none;
+    }
+  }
 }
