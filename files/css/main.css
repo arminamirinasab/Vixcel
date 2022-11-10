@@ -172,7 +172,6 @@ footer.bottomNav input[type="range"]::-webkit-slider-runnable-track {
   width: 100%;
   height: 1px;
   cursor: pointer;
-  animate: 0.2s;
   background: #bfbfbf;
   border-radius: 0px;
 }
@@ -243,10 +242,15 @@ footer.bottomNav input[type="range"]:focus::-ms-fill-upper {
   background: #bfbfbf;
 }
 
+main {
+  margin-bottom: 40px;
+  width: 100vw;
+  height: 75vh;
+  overflow: auto;
+}
+
 main table {
-  width: 100%;
-  height: 80vh;
-  overflow: scroll;
+  transition: all 0.3s;
   display: flex;
   transform-origin: 0 0;
 }
