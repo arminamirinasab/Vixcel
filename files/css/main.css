@@ -1,4 +1,6 @@
 * {
+  margin: 0;
+  padding: 0;
   cursor: default;
   box-sizing: border-box;
 }
@@ -8,6 +10,7 @@
 }
 
 body {
+  user-select: none;
   overflow: hidden;
   font-family: Calibri, "Trebuchet MS", sans-serif;
 }
@@ -28,7 +31,15 @@ input:focus {
   background-color: #e1dfdd;
 }
 
+.top-nav .right, .top-nav .right a, .top-nav .center, .top-nav .left, .control .menu, footer.bottomNav, footer.bottomNav div {
+  display: flex;
+  align-items: center;
+}
+
 .top-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
   overflow: hidden;
   background-image: linear-gradient(to right, #217346, #1e673f);
   color: white;
@@ -52,6 +63,15 @@ input:focus {
   background-color: #1b5f3a;
 }
 
+.top-nav .right {
+  justify-content: end;
+}
+
+.top-nav .right a {
+  height: 100%;
+  padding: 0 10px 0 5px;
+}
+
 .top-nav .right a:hover {
   background-color: #195735;
 }
@@ -71,11 +91,17 @@ input:focus {
 }
 
 .top-nav .center {
+  justify-content: center;
   font-size: 0.9rem;
+}
+
+.top-nav .left {
+  justify-content: start;
 }
 
 .top-nav .left i {
   font-size: 1.2rem;
+  height: 100%;
   color: white;
   padding: 5px 10px;
 }
@@ -85,12 +111,17 @@ input:focus {
 }
 
 .control .menu {
+  justify-content: space-between;
   border-bottom: 1px solid #ddd;
+  padding: 0 3rem;
 }
 
 .control .menu ul {
+  display: flex;
+  list-style: none;
   position: relative;
   margin: auto 0;
+  padding: 0;
 }
 
 .control .menu ul li {
@@ -118,8 +149,9 @@ input:focus {
 
 .control .menu div.share {
   color: #217346;
-  font-size: 13px;
+  font-size: 12px;
   padding: 7px;
+  background-color: white;
 }
 
 .control .ribbon {
@@ -143,6 +175,8 @@ input:focus {
 }
 
 footer.bottomNav {
+  justify-content: space-between;
+  padding: 0 0.5rem;
   background-color: #f3f2f1;
   position: fixed;
   bottom: 0;
@@ -150,7 +184,8 @@ footer.bottomNav {
 }
 
 footer.bottomNav code {
-  font-size: 12px;
+  font-size: 11px;
+  color: #444;
 }
 
 footer.bottomNav div * {

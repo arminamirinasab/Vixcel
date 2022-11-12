@@ -4,6 +4,8 @@
 // Basics CSS
 
 * {
+  margin: 0;
+  padding: 0;
   cursor: default;
   box-sizing: border-box;
 }
@@ -13,6 +15,7 @@ background-color: $columnsBackgroundColor;
 }
 
 body {
+  user-select: none;
   overflow: hidden;
   font-family: Calibri, "Trebuchet MS", sans-serif;
 }
@@ -35,9 +38,17 @@ input:focus {
   }
 }
 
+%dflexCenter {
+  display: flex;
+  align-items: center;
+}
+
 // Top Navigation
 
 .top-nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
   overflow: hidden;
   background-image: linear-gradient(
     to right,
@@ -60,7 +71,13 @@ input:focus {
     }
   }
   .right {
+    @extend %dflexCenter;
+    justify-content: end;
     a {
+      @extend %dflexCenter;
+      // margin: 0 10px ;
+      height: 100%;
+      padding: 0 10px 0 5px;
       &:hover {
         background-color: darken($excel-color, 7%);
       }
@@ -78,11 +95,16 @@ input:focus {
     }
   }
   .center {
+    @extend %dflexCenter;
+    justify-content: center;
     font-size: 0.9rem;
   }
   .left {
+    @extend %dflexCenter;
+    justify-content: start;
     i {
       font-size: 1.2rem;
+      height: 100%;
       color: white;
       padding: 5px 10px;
     }
@@ -94,10 +116,16 @@ input:focus {
 .control {
   background-color: $whiteBackgroundColor;
   .menu {
+    @extend %dflexCenter;
+    justify-content: space-between;
     border-bottom: 1px solid #ddd;
+    padding: 0 3rem;
     ul {
+      display: flex;
+      list-style: none;
       position: relative;
       margin: auto 0;
+      padding: 0;
       li {
         text-align: center;
         font-size: 15.5px;
@@ -121,8 +149,9 @@ input:focus {
     }
     div.share {
       color: $excel-color;
-      font-size: 13px;
+      font-size: 12px;
       padding: 7px;
+      background-color: white;
     }
   }
 
@@ -148,8 +177,15 @@ input:focus {
 // Bottom Navigation
 
 footer.bottomNav {
+  @extend %dflexCenter;
+  justify-content: space-between;
+  padding: 0 0.5rem;
   code {
-    font-size: 12px;
+    font-size: 11px;
+    color: #444
+  }
+  div {
+    @extend %dflexCenter;
   }
   div * {
     padding: 2px 5px;
