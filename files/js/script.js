@@ -2,7 +2,9 @@
 
 const loadingSection = document.getElementById("loadingSection");
 const loadingSectionTransitionTime = 700;
-loadingSection.style.transitionDuration = `${loadingSectionTransitionTime / 1000}s`;
+loadingSection.style.transitionDuration = `${
+  loadingSectionTransitionTime / 1000
+}s`;
 window.onload = function () {
   loadingSection.style.opacity = "0";
   setTimeout(function () {
@@ -41,3 +43,16 @@ function changeZoomButton(changeRange, isPlus) {
   Sheet.style.transform = `scale(${changeRangeConverted})`;
   zoomRange.setAttribute("value", changeRangeConverted);
 }
+
+let tableBody = document.querySelectorAll("input");
+const copyButton = document.querySelector("#copyButton");
+tableBody.forEach(function (element) {
+  element.addEventListener("click", function (e) {
+    copyButton.addEventListener("click", function () {
+      if(element.value.length != 0) {
+        navigator.clipboard.writeText(element.value);
+        element.select();
+      }
+    });
+  });
+});
