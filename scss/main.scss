@@ -11,7 +11,7 @@
 }
 
 ::selection {
-background-color: $columnsBackgroundColor;
+  background-color: $columnsBackgroundColor;
 }
 
 body {
@@ -54,7 +54,7 @@ div#loadingSection {
   display: grid;
   align-items: center;
   justify-content: center;
-  background-color: rgba(0 , 0 , 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 // Top Navigation
@@ -170,6 +170,7 @@ div#loadingSection {
   }
 
   .ribbon {
+    display: flex;
     padding: 10px;
     button {
       * {
@@ -182,8 +183,17 @@ div#loadingSection {
       border: none;
       @extend %forHover;
     }
-    button.verticalButton {
-      flex-direction: column;
+    .ribbonSection {
+      display: flex;
+      padding: 0 5px;
+      border-right: 1px solid #CCC;
+      button.verticalButton {
+        flex-direction: column;
+      }
+
+      div.horizontalButton button span {
+        padding-left: 3px;
+      }
     }
   }
 }
@@ -196,7 +206,7 @@ footer.bottomNav {
   padding: 0 0.5rem;
   code {
     font-size: 11px;
-    color: #444
+    color: #444;
   }
   div {
     @extend %dflexCenter;
@@ -295,16 +305,18 @@ main {
     transition: all 0.25s;
     display: flex;
     transform-origin: 0 0;
-    th , td {
+    th,
+    td {
       width: 100px;
-      border: 0.3px solid #CCC;
+      border: 0.3px solid #ccc;
       text-align: center;
       padding: 0;
     }
     tr th:first-child() {
       width: 40px;
     }
-    tr.firstRow th , tr th:first-child() {
+    tr.firstRow th,
+    tr th:first-child() {
       background-color: $columnsBackgroundColor;
       border-top: none;
     }

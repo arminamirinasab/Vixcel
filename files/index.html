@@ -17,7 +17,16 @@
 <body>
     <!-- Loading Section -->
     <div id="loadingSection">
-        <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        <div class="lds-roller">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
     <!-- Top Navigation -->
     <nav class="top-nav">
@@ -57,54 +66,68 @@
         <!-- Ribbon -->
 
         <div class="ribbon" id="ribbonOne">
-            <button class="verticalButton">
-                <img src="./img/paste.png" alt="" width="35">
-                <span>Paste</span>
-            </button>
+            <div class="ribbonSection">
+                <button class="verticalButton">
+                    <img src="./img/paste.webp" alt="" width="35">
+                    <span>Paste</span>
+                </button>
+
+                <div class="horizontalButton">
+                    <button>
+                        <i class="bi bi-scissors"></i>
+                        <span>Cut</span>
+                    </button>
+
+                    <button>
+                        <i class="bi bi-stickies-fill"></i>
+                        <span>Copy</span>
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
 
     <main>
         <table id="Sheet">
             <tbody id="bodySheet">
-            <tr class="firstRow">
-                <th><i class="bi bi-caret-down-fill"></i></th>
-                <th>A</th>
-                <th>B</th>
-                <th>C</th>
-                <th>D</th>
-                <th>E</th>
-                <th>F</th>
-                <th>G</th>
-                <th>H</th>
-                <th>I</th>
-                <th>J</th>
-                <th>K</th>
-                <th>L</th>
-                <th>M</th>
-            </tr>
+                <tr class="firstRow">
+                    <th><i class="bi bi-caret-down-fill"></i></th>
+                    <th>A</th>
+                    <th>B</th>
+                    <th>C</th>
+                    <th>D</th>
+                    <th>E</th>
+                    <th>F</th>
+                    <th>G</th>
+                    <th>H</th>
+                    <th>I</th>
+                    <th>J</th>
+                    <th>K</th>
+                    <th>L</th>
+                    <th>M</th>
+                </tr>
 
-            <script>
-                const bodySheet = document.querySelector("#bodySheet");
-                // Temporary !!!!!!!!!!!!!!!
-                let cellNumbers = 13;
-                // Loop For Create <tr>
-                for (let i = 1;i <= 20;i++) {
-                    let itsRow = document.createElement("tr") , itsNumber = document.createElement("th");
-                    // Assign Row Number
-                    itsNumber.innerHTML = i;
-                    // Append Row Number
-                    itsRow.appendChild(itsNumber);
-                    // Loop For Create <td> > <input>
-                    for(let i = 0;i < cellNumbers;i++) {
-                    let itsCell = document.createElement("td") , itsInput = document.createElement("input");
-                    itsCell.appendChild(itsInput);
-                    itsRow.appendChild(itsCell);
+                <script>
+                    const bodySheet = document.querySelector("#bodySheet");
+                    // Temporary !!!!!!!!!!!!!!!
+                    let cellNumbers = 13;
+                    // Loop For Create <tr>
+                    for (let i = 1; i <= 20; i++) {
+                        let itsRow = document.createElement("tr"), itsNumber = document.createElement("th");
+                        // Assign Row Number
+                        itsNumber.innerHTML = i;
+                        // Append Row Number
+                        itsRow.appendChild(itsNumber);
+                        // Loop For Create <td> > <input>
+                        for (let i = 0; i < cellNumbers; i++) {
+                            let itsCell = document.createElement("td"), itsInput = document.createElement("input");
+                            itsCell.appendChild(itsInput);
+                            itsRow.appendChild(itsCell);
+                        }
+                        bodySheet.appendChild(itsRow);
                     }
-                    bodySheet.appendChild(itsRow);
-                }
-            </script>      
-        </tbody>
+                </script>
+            </tbody>
         </table>
     </main>
 
