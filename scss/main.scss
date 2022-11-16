@@ -299,7 +299,7 @@ footer.bottomNav {
 
 main {
   width: 100vw;
-  height: 77vh;
+  height: 75vh;
   overflow: auto;
   table {
     transition: all 0.25s;
@@ -334,6 +334,7 @@ main {
     input:focus {
       border: 2px solid $excel-color;
       cursor: text;
+      user-select: contain;
     }
   }
 }

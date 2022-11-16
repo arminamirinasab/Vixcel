@@ -45,14 +45,32 @@ function changeZoomButton(changeRange, isPlus) {
 }
 
 let tableBody = document.querySelectorAll("input");
-const copyButton = document.querySelector("#copyButton");
+const copyButton = document.querySelector("#copyButton"),
+  cutButton = document.querySelector("#cutButton"),
+  pasteButton = document.querySelector("#pasteButton");
+let selectedElement;
+
+// Get Selected Cell
+
 tableBody.forEach(function (element) {
-  element.addEventListener("click", function (e) {
-    copyButton.addEventListener("click", function () {
-      if(element.value.length != 0) {
-        navigator.clipboard.writeText(element.value);
-        element.select();
-      }
-    });
+  element.addEventListener("click", function () {
+    selectedElement = element;
+    if (element.value.length != 0) {
+      element.select();
+    }
   });
+});
+// Copy
+copyButton.addEventListener("click", function () {
+  navigator.clipboard.writeText(selectedElement.value);
+  selectedElement.select();
+});
+// Cut
+cutButton.addEventListener("click", function () {
+  navigator.clipboard.writeText(selectedElement.value);
+  selectedElement.value = "";
+});
+// Paste
+pasteButton.addEventListener("click", function () {
+  navigator.clipboard.readText().then((clipText) => (selectedElement.value = clipText));
 });

@@ -145,7 +145,7 @@ footer.bottomNav input[type="range"]:focus::-ms-fill-lower { background: #bfbfbf
 
 footer.bottomNav input[type="range"]:focus::-ms-fill-upper { background: #bfbfbf; }
 
-main { width: 100vw; height: 77vh; overflow: auto; }
+main { width: 100vw; height: 75vh; overflow: auto; }
 
 main table { transition: all 0.25s; display: flex; transform-origin: 0 0; }
 
@@ -159,4 +159,4 @@ main table tr td input { width: 100%; height: 100%; border: none; }
 
 main table input { cursor: cell; transition: all 0.1s; color: transparent; text-shadow: 0 0 0 black; }
 
-main table input:focus { border: 2px solid #217346; cursor: text; }
+main table input:focus { border: 2px solid #217346; cursor: text; user-select: contain; }
