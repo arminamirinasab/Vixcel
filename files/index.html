@@ -45,21 +45,23 @@
     <!-- Ribbon & Menus -->
     <div class="control">
         <div class="menu">
-            <ul>
-                <li onclick="changeTabs('10px')" style="width: 60px;">Home</li>
-                <span id="home-border"></span>
-                <li onclick="changeTabs('75px')" style="width: 70px;">Insert</li>
-                <li onclick="changeTabs('155px' , '60px')" style="width: 110px;">Page Layout</li>
-                <li onclick="changeTabs('255px' , '50px')" style="width: 80px;">Formulas</li>
-                <li onclick="changeTabs('335px' , '30px')" style="width: 60px;">Data</li>
-                <li onclick="changeTabs('395px')" style="width: 70px;">Review</li>
-                <li onclick="changeTabs('460px' , '30px')" style="width: 50px;">View</li>
-                <li onclick="changeTabs('510px' , '30px')" style="width: 50px;">Help</li>
+            <ul id="menu">
+                <li style="width: 60px;" class="activeTab">Home</li>
+                <li style="width: 70px;">Insert</li>
+                <li style="width: 110px;">Page Layout</li>
+                <li style="width: 80px;">Formulas</li>
+                <li style="width: 60px;">Data</li>
+                <li style="width: 70px;">Review</li>
+                <li style="width: 50px;">View</li>
+                <li style="width: 50px;">Help</li>
                 <span class="brd-green"></span>
             </ul>
 
             <div class="share">
-                <b><i class="bi bi-box-arrow-up-right"></i> Share</b>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill-add" viewBox="0 0 16 16">
+                    <path d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0Zm-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
+                    <path d="M2 13c0 1 1 1 1 1h5.256A4.493 4.493 0 0 1 8 12.5a4.49 4.49 0 0 1 1.544-3.393C9.077 9.038 8.564 9 8 9c-5 0-6 3-6 4Z"/>
+                  </svg> Share
             </div>
         </div>
 

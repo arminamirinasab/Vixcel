@@ -53,11 +53,11 @@ input:focus { outline: none; }
 
 .control .ribbon button:hover, footer.bottomNav i:hover { background-color: #e1dfdd; }
 
-.top-nav .right, .top-nav .right a, .top-nav .center, .top-nav .left, .control .menu, footer.bottomNav, footer.bottomNav div { display: flex; align-items: center; }
+.top-nav .right, .top-nav .right a, .top-nav .center, .top-nav .left, .control .menu, .control .menu div.share, footer.bottomNav, footer.bottomNav div { display: flex; align-items: center; }
 
 div#loadingSection { position: fixed; height: 100vh; width: 100%; z-index: 999; left: 0; display: grid; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.8); }
 
-.top-nav { display: flex; justify-content: space-between; padding: 0; overflow: hidden; background-image: linear-gradient(to right, #217346, #1e673f); color: white; }
+.top-nav { display: flex; justify-content: space-between; padding: 0; overflow: hidden; background-color: #217346; color: white; }
 
 .top-nav a, .top-nav span, .top-nav i { color: white; }
 
@@ -87,21 +87,25 @@ div#loadingSection { position: fixed; height: 100vh; width: 100%; z-index: 999; 
 
 .control { background-color: #f3f2f1; }
 
-.control .menu { justify-content: space-between; border-bottom: 1px solid #ddd; padding: 0 3rem; }
+.control .menu { justify-content: space-between; padding: 0 3rem; background-color: #217346; }
 
 .control .menu ul { display: flex; list-style: none; position: relative; margin: auto 0; padding: 0; }
 
-.control .menu ul li { text-align: center; font-size: 15.5px; color: #444; padding: 5px 0px; }
+.control .menu ul li { transition: background-color 0.15s; text-align: center; font-size: 15.5px; color: white; padding: 5px 0px; }
 
-.control .menu ul li:hover { background-color: white; color: #000; }
+.control .menu ul li:hover:not(.activeTab) { background-color: #1e673f; }
 
-.control .menu ul span#home-border { transition: all 0.3s; content: ""; width: 40px; height: 3px; background-color: #217346; position: absolute; left: 10px; bottom: 0; }
+.control .menu ul .activeTab { background-color: #f3f2f1; color: #333; }
 
-.control .menu div.share { color: #217346; font-size: 12px; padding: 7px; background-color: white; }
+.control .menu ul span#home-border { transition: all 0.3s; content: ""; width: 40px; height: 3px; background-color: white; position: absolute; left: 10px; bottom: 0; }
+
+.control .menu div.share { color: white; font-size: 13px; padding: 7px; }
+
+.control .menu div.share svg { margin: 0 5px; }
 
 .control .ribbon { display: flex; padding: 10px; }
 
-.control .ribbon button { font-size: 13px; padding: 5px; display: flex; align-items: center; border: none; }
+.control .ribbon button { background-color: #f3f2f1; font-size: 13px; padding: 5px; display: flex; align-items: center; border: none; }
 
 .control .ribbon button * { cursor: pointer; }
 

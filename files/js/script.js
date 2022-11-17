@@ -14,11 +14,13 @@ window.onload = function () {
 
 // Switch Between Tabs
 
-const tabBorder = document.querySelector("#home-border");
-function changeTabs(position, width = "40px") {
-  tabBorder.style.left = position;
-  tabBorder.style.width = width;
-}
+const menu = document.querySelector("#menu");
+menu.addEventListener("click", function (e) {
+  for (let i = 0; i < menu.children.length; i++) {
+    menu.children[i].classList.remove("activeTab");
+  }
+  e.target.className = "activeTab";
+});
 
 // Zoom In Sheet
 
@@ -72,5 +74,7 @@ cutButton.addEventListener("click", function () {
 });
 // Paste
 pasteButton.addEventListener("click", function () {
-  navigator.clipboard.readText().then((clipText) => (selectedElement.value = clipText));
+  navigator.clipboard
+    .readText()
+    .then((clipText) => (selectedElement.value = clipText));
 });
