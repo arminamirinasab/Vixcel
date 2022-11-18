@@ -6,6 +6,26 @@ i.icon-lg { font-size: 1.1rem; }
 
 .flex-column { flex-direction: column; }
 
+footer.bottomNav i:hover, .control .ribbon button:hover { background-color: #e1dfdd; }
+
+.top-nav .right, .top-nav .right a, .top-nav .center, .top-nav .left, footer.bottomNav, footer.bottomNav div, .control .menu div.share { display: flex; align-items: center; }
+
+/* In this file, rarely used styles are called for 
+development and in codes to make the main file quieter */
+* { margin: 0; padding: 0; cursor: default; box-sizing: border-box; }
+
+::selection { background-color: #e6e6e6; }
+
+body { user-select: none; overflow: hidden; font-family: "Space Grotesk", sans-serif; }
+
+a { text-decoration: none; }
+
+i { font-style: normal; }
+
+input:focus { outline: none; }
+
+div#loadingSection { position: fixed; height: 100vh; width: 100%; z-index: 999; left: 0; display: grid; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.8); }
+
 .lds-roller { display: inline-block; position: relative; width: 80px; height: 80px; }
 
 .lds-roller div { animation: lds-roller 1.3s cubic-bezier(0.5, 0, 0.5, 1) infinite; transform-origin: 40px 40px; }
@@ -47,24 +67,6 @@ i.icon-lg { font-size: 1.1rem; }
 @keyframes lds-roller { 0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); } }
 
-* { margin: 0; padding: 0; cursor: default; box-sizing: border-box; }
-
-::selection { background-color: #e6e6e6; }
-
-body { user-select: none; overflow: hidden; font-family: 'Space Grotesk', sans-serif; }
-
-a { text-decoration: none; }
-
-i { font-style: normal; }
-
-input:focus { outline: none; }
-
-.control .ribbon button:hover, footer.bottomNav i:hover { background-color: #e1dfdd; }
-
-.top-nav .right, .top-nav .right a, .top-nav .center, .top-nav .left, .control .menu div.share, footer.bottomNav, footer.bottomNav div { display: flex; align-items: center; }
-
-div#loadingSection { position: fixed; height: 100vh; width: 100%; z-index: 999; left: 0; display: grid; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.8); }
-
 .top-nav { display: flex; justify-content: space-between; padding: 0; overflow: hidden; background-color: #217346; color: white; }
 
 .top-nav a, .top-nav span, .top-nav i { color: white; }
@@ -92,36 +94,6 @@ div#loadingSection { position: fixed; height: 100vh; width: 100%; z-index: 999; 
 .top-nav .left { justify-content: start; }
 
 .top-nav .left i { font-size: 1.2rem; height: 100%; color: white; padding: 5px 10px; }
-
-.control { background-color: #f3f2f1; }
-
-.control .menu { display: flex; align-items: flex-end; justify-content: space-between; padding: 0 3rem; background-color: #217346; }
-
-.control .menu ul { display: flex; list-style: none; position: relative; margin: 0; padding: 0; }
-
-.control .menu ul li { transition: background-color 0.15s; text-align: center; font-size: 14px; color: white; padding: 5px 0px; }
-
-.control .menu ul li:hover:not(.activeTab) { background-color: #1e673f; }
-
-.control .menu ul .activeTab { background-color: #f3f2f1; color: #333; }
-
-.control .menu ul span#home-border { transition: all 0.3s; content: ""; width: 40px; height: 3px; background-color: white; position: absolute; left: 10px; bottom: 0; }
-
-.control .menu div.share { color: white; font-size: 13px; padding: 7px; }
-
-.control .menu div.share svg { margin: 0 5px; }
-
-.control .ribbon { display: flex; padding: 10px; }
-
-.control .ribbon button { background-color: #f3f2f1; font-size: 12px; padding: 5px; display: flex; align-items: center; border: none; }
-
-.control .ribbon button * { cursor: pointer; }
-
-.control .ribbon .ribbonSection { display: flex; padding: 0 5px; border-right: 1px solid #CCC; }
-
-.control .ribbon .ribbonSection button.verticalButton { flex-direction: column; }
-
-.control .ribbon .ribbonSection div.horizontalButton button span { padding-left: 3px; }
 
 footer.bottomNav { justify-content: space-between; padding: 0 0.5rem; background-color: #f3f2f1; position: fixed; bottom: 0; width: 100%; }
 
@@ -156,6 +128,36 @@ footer.bottomNav input[type="range"]::-ms-thumb { margin-top: 1px; height: 28px;
 footer.bottomNav input[type="range"]:focus::-ms-fill-lower { background: #bfbfbf; }
 
 footer.bottomNav input[type="range"]:focus::-ms-fill-upper { background: #bfbfbf; }
+
+.control { background-color: #f3f2f1; }
+
+.control .menu { display: flex; align-items: flex-end; justify-content: space-between; padding: 0 3rem; background-color: #217346; }
+
+.control .menu ul { display: flex; list-style: none; position: relative; margin: 0; padding: 0; }
+
+.control .menu ul li { transition: background-color 0.15s; text-align: center; font-size: 14px; color: white; padding: 5px 0px; }
+
+.control .menu ul li:hover:not(.activeTab) { background-color: #1e673f; }
+
+.control .menu ul .activeTab { background-color: #f3f2f1; color: #333; }
+
+.control .menu ul span#home-border { transition: all 0.3s; content: ""; width: 40px; height: 3px; background-color: white; position: absolute; left: 10px; bottom: 0; }
+
+.control .menu div.share { color: white; font-size: 13px; padding: 7px; }
+
+.control .menu div.share svg { margin: 0 5px; }
+
+.control .ribbon { display: flex; padding: 10px; }
+
+.control .ribbon button { background-color: #f3f2f1; font-size: 12px; padding: 5px; display: flex; align-items: center; border: none; }
+
+.control .ribbon button * { cursor: pointer; }
+
+.control .ribbon .ribbonSection { display: flex; padding: 0 5px; border-right: 1px solid #CCC; }
+
+.control .ribbon .ribbonSection button.verticalButton { flex-direction: column; }
+
+.control .ribbon .ribbonSection div.horizontalButton button span { padding-left: 3px; }
 
 main { width: 100vw; height: 75vh; overflow: auto; }
 
