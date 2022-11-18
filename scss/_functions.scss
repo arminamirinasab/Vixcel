@@ -5,6 +5,19 @@ $whiteBackgroundColor: #f3f2f1;
 $hoverItemBackgroundColor: #e1dfdd;
 $columnsBackgroundColor: #e6e6e6;
 
+i.icon-lg {
+  font-size: 1.1rem;
+}
+
+.d-flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.flex-column {
+  flex-direction: column;
+}
 // Loading CSS
 
 .lds-roller {

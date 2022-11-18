@@ -1,3 +1,11 @@
+i.icon-lg { font-size: 1.1rem; }
+
+.d-flex { display: flex; }
+
+.align-items-center { align-items: center; }
+
+.flex-column { flex-direction: column; }
+
 .lds-roller { display: inline-block; position: relative; width: 80px; height: 80px; }
 
 .lds-roller div { animation: lds-roller 1.3s cubic-bezier(0.5, 0, 0.5, 1) infinite; transform-origin: 40px 40px; }
