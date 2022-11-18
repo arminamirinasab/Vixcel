@@ -17,7 +17,7 @@
 body {
   user-select: none;
   overflow: hidden;
-  font-family: Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'Space Grotesk', sans-serif;
 }
 
 a {
@@ -126,7 +126,8 @@ div#loadingSection {
 .control {
   background-color: $whiteBackgroundColor;
   .menu {
-    @extend %dflexCenter;
+    display: flex;
+    align-items: flex-end;
     justify-content: space-between;
     padding: 0 3rem;
     background-color: $excel-color;
@@ -134,13 +135,13 @@ div#loadingSection {
       display: flex;
       list-style: none;
       position: relative;
-      margin: auto 0;
+      margin: 0;
       padding: 0;
 
       li {
         transition: background-color 0.15s;
         text-align: center;
-        font-size: 15.5px;
+        font-size: 14px;
         color: white;
         padding: 5px 0px;
         &:hover:not(.activeTab) {
@@ -182,7 +183,7 @@ div#loadingSection {
       * {
         cursor: pointer;
       }
-      font-size: 13px;
+      font-size: 12px;
       padding: 5px;
       display: flex;
       align-items: center;

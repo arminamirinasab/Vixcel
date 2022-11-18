@@ -51,7 +51,7 @@ i.icon-lg { font-size: 1.1rem; }
 
 ::selection { background-color: #e6e6e6; }
 
-body { user-select: none; overflow: hidden; font-family: Calibri, "Trebuchet MS", sans-serif; }
+body { user-select: none; overflow: hidden; font-family: 'Space Grotesk', sans-serif; }
 
 a { text-decoration: none; }
 
@@ -61,7 +61,7 @@ input:focus { outline: none; }
 
 .control .ribbon button:hover, footer.bottomNav i:hover { background-color: #e1dfdd; }
 
-.top-nav .right, .top-nav .right a, .top-nav .center, .top-nav .left, .control .menu, .control .menu div.share, footer.bottomNav, footer.bottomNav div { display: flex; align-items: center; }
+.top-nav .right, .top-nav .right a, .top-nav .center, .top-nav .left, .control .menu div.share, footer.bottomNav, footer.bottomNav div { display: flex; align-items: center; }
 
 div#loadingSection { position: fixed; height: 100vh; width: 100%; z-index: 999; left: 0; display: grid; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0.8); }
 
@@ -95,11 +95,11 @@ div#loadingSection { position: fixed; height: 100vh; width: 100%; z-index: 999; 
 
 .control { background-color: #f3f2f1; }
 
-.control .menu { justify-content: space-between; padding: 0 3rem; background-color: #217346; }
+.control .menu { display: flex; align-items: flex-end; justify-content: space-between; padding: 0 3rem; background-color: #217346; }
 
-.control .menu ul { display: flex; list-style: none; position: relative; margin: auto 0; padding: 0; }
+.control .menu ul { display: flex; list-style: none; position: relative; margin: 0; padding: 0; }
 
-.control .menu ul li { transition: background-color 0.15s; text-align: center; font-size: 15.5px; color: white; padding: 5px 0px; }
+.control .menu ul li { transition: background-color 0.15s; text-align: center; font-size: 14px; color: white; padding: 5px 0px; }
 
 .control .menu ul li:hover:not(.activeTab) { background-color: #1e673f; }
 
@@ -113,7 +113,7 @@ div#loadingSection { position: fixed; height: 100vh; width: 100%; z-index: 999; 
 
 .control .ribbon { display: flex; padding: 10px; }
 
-.control .ribbon button { background-color: #f3f2f1; font-size: 13px; padding: 5px; display: flex; align-items: center; border: none; }
+.control .ribbon button { background-color: #f3f2f1; font-size: 12px; padding: 5px; display: flex; align-items: center; border: none; }
 
 .control .ribbon button * { cursor: pointer; }
 
