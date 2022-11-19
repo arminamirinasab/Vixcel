@@ -1,17 +1,3 @@
-// Hidden Loading Section
-
-const loadingSection = document.getElementById("loadingSection");
-const loadingSectionTransitionTime = 700;
-loadingSection.style.transitionDuration = `${
-  loadingSectionTransitionTime / 1000
-}s`;
-window.onload = function () {
-  loadingSection.style.opacity = "0";
-  setTimeout(function () {
-    loadingSection.style.display = "none";
-  }, loadingSectionTransitionTime);
-};
-
 // Switch Between Tabs
 
 const menu = document.querySelector("#menu");
@@ -51,17 +37,40 @@ const copyButton = document.querySelector("#copyButton"),
   cutButton = document.querySelector("#cutButton"),
   pasteButton = document.querySelector("#pasteButton");
 let selectedElement;
+const boldButton = document.querySelector("#boldButton");
+const italicButton = document.querySelector("#italicButton");
+const underlineButton = document.querySelector("#underlineButton");
 
 // Get Selected Cell
 
 tableBody.forEach(function (element) {
   element.addEventListener("click", function () {
     selectedElement = element;
+
+    if(selectedElement.style.fontWeight == "bold") {
+      boldButton.className = "activeBtn";
+    } else {
+      boldButton.classList.remove("activeBtn");
+    }
+
+    if(selectedElement.style.fontStyle === "italic") {
+      italicButton.className = "activeBtn";
+    } else {
+      italicButton.classList.remove("activeBtn");
+    }
+
+    if(selectedElement.style.textDecoration === "underline") {
+      underlineButton.className = "activeBtn";
+    } else {
+      underlineButton.classList.remove("activeBtn");
+    }
+
     if (element.value.length != 0) {
       element.select();
     }
   });
 });
+
 // Copy
 copyButton.addEventListener("click", function () {
   navigator.clipboard.writeText(selectedElement.value);
@@ -77,4 +86,40 @@ pasteButton.addEventListener("click", function () {
   navigator.clipboard
     .readText()
     .then((clipText) => (selectedElement.value = clipText));
+});
+
+// Bold
+boldButton.addEventListener("click" , function () {
+  if (selectedElement.style.fontWeight === "bold") {
+    selectedElement.style.fontWeight = "normal";
+    boldButton.classList.remove("activeBtn");
+  } else {
+    selectedElement.style.fontWeight = "bold";
+    boldButton.className = "activeBtn";
+  }
+  selectedElement.select();
+});
+
+// Italic
+italicButton.addEventListener("click" , function () {
+  if (selectedElement.style.fontStyle === "italic") {
+    selectedElement.style.fontStyle = "normal";
+    italicButton.classList.remove("activeBtn");
+  } else {
+    selectedElement.style.fontStyle = "italic";
+    italicButton.className = "activeBtn";
+  }
+  selectedElement.select();
+});
+
+// Underline
+underlineButton.addEventListener("click" , function () {
+  if (selectedElement.style.textDecoration === "underline") {
+    selectedElement.style.textDecoration = "none";
+    underlineButton.classList.remove("activeBtn");
+  } else {
+    selectedElement.style.textDecoration = "underline";
+    underlineButton.className = "activeBtn";
+  }
+  selectedElement.select();
 });

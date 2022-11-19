@@ -61,15 +61,19 @@
     padding: 10px;
     button {
       background-color: $whiteBackgroundColor;
-      * {
-        cursor: pointer;
-      }
       font-size: 12px;
       padding: 5px;
       display: flex;
       align-items: center;
       border: none;
       @extend %forHover;
+      transition: 0.1s;
+      * {
+        cursor: pointer;
+      }
+    }
+    button.activeBtn {
+      background-color: $hoverItemBackgroundColor;
     }
     .ribbonSection {
       display: flex;
@@ -119,6 +123,7 @@ main {
       transition: all 0.1s;
       color: transparent;
       text-shadow: 0 0 0 black;
+      padding: 4px;
     }
     input:focus {
       border: 2px solid $excel-color;
