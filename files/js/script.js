@@ -40,6 +40,8 @@ let selectedElement;
 const boldButton = document.querySelector("#boldButton");
 const italicButton = document.querySelector("#italicButton");
 const underlineButton = document.querySelector("#underlineButton");
+const strikethroughtButton = document.querySelector("#strikethroughtButton");
+const borderAllButton = document.querySelector("#borderAllButton");
 
 // Get Selected Cell
 
@@ -63,6 +65,18 @@ tableBody.forEach(function (element) {
       underlineButton.className = "activeBtn";
     } else {
       underlineButton.classList.remove("activeBtn");
+    }
+
+    if(selectedElement.style.textDecoration === "line-through") {
+      strikethroughtButton.className = "activeBtn";
+    } else {
+      strikethroughtButton.classList.remove("activeBtn");
+    }
+
+    if(selectedElement.classList.contains("borderAll")) {
+      borderAllButton.className = "activeBtn";
+    } else {
+      borderAllButton.classList.remove("activeBtn");
     }
 
     if (element.value.length != 0) {
@@ -120,6 +134,30 @@ underlineButton.addEventListener("click" , function () {
   } else {
     selectedElement.style.textDecoration = "underline";
     underlineButton.className = "activeBtn";
+  }
+  selectedElement.select();
+});
+
+// Strikethorught
+strikethroughtButton.addEventListener("click" , function () {
+  if (selectedElement.style.textDecoration === "line-through") {
+    selectedElement.style.textDecoration = "none";
+    strikethroughtButton.classList.remove("activeBtn");
+  } else {
+    selectedElement.style.textDecoration = "line-through";
+    strikethroughtButton.className = "activeBtn";
+  }
+  selectedElement.select();
+});
+
+// Border All
+borderAllButton.addEventListener("click" , function () {
+  if (selectedElement.classList.contains("borderAll")) {
+    selectedElement.classList.remove("borderAll");
+    borderAllButton.classList.remove("activeBtn");
+  } else {
+    selectedElement.className = "borderAll";
+    borderAllButton.className = "activeBtn";
   }
   selectedElement.select();
 });

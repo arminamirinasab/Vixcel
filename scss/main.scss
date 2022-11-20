@@ -130,5 +130,8 @@ main {
       cursor: text;
       user-select: contain;
     }
+    input.borderAll {
+      border: 2px solid #444;
+    }
   }
 }
