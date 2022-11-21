@@ -87,6 +87,17 @@
         padding-left: 3px;
       }
     }
+    select {
+      border: 1px solid #DDD;
+      font-size: 12px;
+      padding: 3px 5px;
+      option {
+        padding: 5px;
+      }
+      &:focus {
+        outline: none;
+      }
+    }
   }
 }
 

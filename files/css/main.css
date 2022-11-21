@@ -161,6 +161,12 @@ footer.bottomNav input[type="range"]:focus::-ms-fill-upper { background: #bfbfbf
 
 .control .ribbon .ribbonSection div.horizontalButton button span { padding-left: 3px; }
 
+.control .ribbon select { border: 1px solid #DDD; font-size: 12px; padding: 3px 5px; }
+
+.control .ribbon select option { padding: 5px; }
+
+.control .ribbon select:focus { outline: none; }
+
 main { width: 100vw; height: 75vh; overflow: auto; }
 
 main table { transition: all 0.25s; display: flex; transform-origin: 0 0; }
