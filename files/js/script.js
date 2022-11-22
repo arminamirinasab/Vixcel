@@ -132,6 +132,7 @@ underlineButton.addEventListener("click" , function () {
     selectedElement.style.textDecoration = "none";
     underlineButton.classList.remove("activeBtn");
   } else {
+    strikethroughtButton.classList.remove("activeBtn");
     selectedElement.style.textDecoration = "underline";
     underlineButton.className = "activeBtn";
   }
@@ -144,6 +145,7 @@ strikethroughtButton.addEventListener("click" , function () {
     selectedElement.style.textDecoration = "none";
     strikethroughtButton.classList.remove("activeBtn");
   } else {
+    underlineButton.classList.remove("activeBtn");
     selectedElement.style.textDecoration = "line-through";
     strikethroughtButton.className = "activeBtn";
   }
